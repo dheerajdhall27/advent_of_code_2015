@@ -1,14 +1,17 @@
 # Create by Dheeraj Dhall - 12/03/2020
 
+require '../common/file_reader'
 
+# This class is to calculate the presents distributed by santa
+# followin the directions provided
 class Presents
 
     def initialize
-        file = File.open("input.rtf")
-        @file_data = file.read
+        @file_data = FileReader.new.get_file_data("input.rtf")
     end
 
 
+    # This method is used to caluclate the number of houses that have at least one present
     def get_number_of_houses_with_one_present
         house = {}
         
@@ -33,6 +36,8 @@ class Presents
         house.count
     end
 
+    # This method is used to caluclate the number of houses that have at least one present
+    # but this is with a bot included
     def get_number_of_houses_with_one_present_with_robot
         house = {}
 

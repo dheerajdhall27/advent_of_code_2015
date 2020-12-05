@@ -3,11 +3,12 @@
 # This class is used to find the correct floor for the movement of Santa
 # also to find the position in the data where santa reaches the basement
 # Santa moves up if the char is '(' and down if the char is ')'
+
+require '../common/file_reader'
 class SantaFloor
 
     def initialize
-        file = File.open("input.rtf")
-        @file_data = file.read
+        @file_data = FileReader.new.get_file_data("input.rtf")
     end
 
     # This method gives the floor santa would end up on

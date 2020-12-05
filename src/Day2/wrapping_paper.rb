@@ -1,5 +1,6 @@
 # Create by Dheeraj Dhall - 12/03/2020
 
+require '../common/file_reader'
 
 # This class is used to calculate the total are of the wrapping paper required
 class WrappingPaper
@@ -9,6 +10,7 @@ class WrappingPaper
         @file_data = file.read
     end
 
+    # This method is to calculate the total are of the wrapping paper required
     def get_total_area
         rows = @file_data.split("\n")
         total_area = 0
@@ -28,6 +30,7 @@ class WrappingPaper
     end
 
 
+    # This method is to calculate the total length of the ribbon required
     def get_ribbon_required
         rows = @file_data.split("\n")
         total_ribbon_length = 0
