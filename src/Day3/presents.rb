@@ -12,6 +12,7 @@ class Presents
 
 
     # This method is used to caluclate the number of houses that have at least one present
+    # Santa follow the 
     def get_number_of_houses_with_one_present
         house = {}
         
